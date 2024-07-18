@@ -1,9 +1,19 @@
+import { services } from "../constans"
+import ServicesCard from '../components/ServicesCard'
 
 
 const Servises = () => {
   return (
-    <div>Servises</div>
+    <section>
+      <div className="gap-9 max-container flex justify-center items-center flex-wrap">
+      {services.map((service)=>(
+          <ServicesCard key={service.label}
+          {...service}
+
+          />
+      ))}
+      </div>
+      </section>
   )
 }
-
 export default Servises
